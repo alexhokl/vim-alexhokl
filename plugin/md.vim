@@ -24,3 +24,13 @@ nnoremap <leader>yaml :call AddCodeBlock("yaml")<cr>
 nnoremap <leader>js :call AddCodeBlock("js")<cr>
 nnoremap <leader>csharp :call AddCodeBlock("csharp")<cr>
 nnoremap <leader>go :call AddCodeBlock("go")<cr>
+
+let g:vim_markdown_conceal_code_blocks = 0
+
+" latex math
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+
+"indentation
+let g:vim_markdown_new_list_item_indent = 2
+
