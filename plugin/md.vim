@@ -34,3 +34,6 @@ let g:vim_markdown_math = 1
 "indentation
 let g:vim_markdown_new_list_item_indent = 2
 
+" attempt to fix problem - pattern uses more memory than 'maxmempattern'
+" the default is 1000
+set mmp=5000
