@@ -9,5 +9,6 @@ if has('folding')
   nnoremap <leader>c3 :set foldlevel=3<cr>
   nnoremap <leader>c4 :set foldlevel=4<cr>
   nnoremap <leader>c5 :set foldlevel=5<cr>
+  nnoremap <leader>c9 :set foldlevel=99<cr>
 endif
 
