@@ -13,5 +13,7 @@ noremap <Right> <NOP>
 
 noremap <PageUp> <NOP>
 noremap <PageDown> <NOP>
+inoremap <PageUp> <NOP>
+inoremap <PageDown> <NOP>
 
 nnoremap <leader>e :exe getline(line('.'))<cr>
