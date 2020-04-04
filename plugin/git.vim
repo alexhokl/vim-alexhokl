@@ -7,3 +7,5 @@ nnoremap <leader>gw :Gbrowse<CR>
 "nnoremap <leader>gan :Git commit --amend --no-edit<CR>
 nnoremap <leader>gl :Glog -- %<CR>
 
+nnoremap <C-F> :Ggr <cword><CR>
+:command -nargs=+ Ggr execute 'silent Ggrep!' <q-args> | cw | redraw!
