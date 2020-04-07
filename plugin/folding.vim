@@ -1,7 +1,6 @@
 if has('folding')
   set foldmethod=indent
   set foldlevelstart=99
-  set foldcolumn=5
 
   nnoremap <leader>c0 :set foldlevel=0<cr>
   nnoremap <leader>c1 :set foldlevel=1<cr>
