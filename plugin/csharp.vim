@@ -27,10 +27,8 @@ augroup omnisharp_commands
 
   autocmd FileType cs nnoremap <buffer> <Leader>fx :OmniSharpFixUsings<CR>
   autocmd FileType cs nnoremap <buffer> <Leader>tt :OmniSharpTypeLookup<CR>
-  autocmd FileType cs nnoremap <buffer> <Leader>dc :OmniSharpDocumentation<CR>
   autocmd FileType cs nnoremap <buffer> <C-\> :OmniSharpSignatureHelp<CR>
   autocmd FileType cs inoremap <buffer> <C-\> <C-o>:OmniSharpSignatureHelp<CR>
-
 
   " Navigate up and down by method/property/field
   autocmd FileType cs nnoremap <buffer> [m :OmniSharpNavigateUp<CR>
@@ -41,12 +39,6 @@ augroup END
 nnoremap <Leader>ca :OmniSharpGetCodeActions<CR>
 " Run code actions with text selected in visual mode to extract method
 xnoremap <Leader>ca :call OmniSharp#GetCodeActions('visual')<CR>
-
-" Rename with dialog
-nnoremap <Leader>nm :OmniSharpRename<CR>
-nnoremap <F2> :OmniSharpRename<CR>
-" Rename without dialog - with cursor on the symbol to rename: `:Rename newname`
-command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
 
 nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
 
