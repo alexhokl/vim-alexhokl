@@ -60,4 +60,4 @@ nnoremap <Leader>th :OmniSharpHighlightTypes<CR>
 " Enable snippet completion
 let g:OmniSharp_want_snippet=1
 
-autocmd BufWritePost *.cs silent !dotnet format --files <afile>
+autocmd BufWritePost *.cs silent :call OmniSharp#CodeFormat()
