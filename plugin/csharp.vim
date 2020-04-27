@@ -4,7 +4,7 @@ autocmd BufNewFile,BufReadPost *.cs setl ts=4 sw=4 sts=4 expandtab
 " =================== omnisharp-vim ========================
 
 let g:OmniSharp_server_stdio = 1
-let g:OmniSharp_selector_ui = 'ctrlp'
+let g:OmniSharp_selector_ui = 'fzf'
 let g:ale_linters = { 'cs': ['OmniSharp'] }
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
