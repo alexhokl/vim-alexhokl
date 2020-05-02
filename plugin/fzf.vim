@@ -49,5 +49,8 @@ let g:fzf_colors =
 "   'previous-history' instead of 'down' and 'up'.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-nnoremap <silent> <C-t> :GFiles -co --exclude-standard<CR>
+nnoremap <silent> <C-p> :GFiles -co --exclude-standard<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
+nnoremap <C-f> :Rg <C-R><CR>
+nnoremap <leader>F :Rg <C-R><C-W><CR>
+
