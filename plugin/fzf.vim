@@ -49,8 +49,9 @@ let g:fzf_colors =
 "   'previous-history' instead of 'down' and 'up'.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 nnoremap <silent> <C-p> :GFiles -co --exclude-standard<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
-nnoremap <C-f> :Rg <C-R><CR>
-nnoremap <leader>F :Rg <C-R><C-W><CR>
+nnoremap <C-f> :Rg<cr>
 
