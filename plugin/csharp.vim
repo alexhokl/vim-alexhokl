@@ -57,3 +57,5 @@ nmap <Leader>th :OmniSharpHighlightTypes<CR>
 " Enable snippet completion
 let g:OmniSharp_want_snippet=1
 
+" XML documentation
+nnoremap /// :call AngelDoc#InsertXmlDoc()<CR>
