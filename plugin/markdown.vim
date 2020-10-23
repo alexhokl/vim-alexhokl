@@ -12,6 +12,11 @@ function! AddCodeBlock(languageType)
 	:execute join([l:readyForInsert, a:languageType, l:finish], "")
 endfunction
 
+function! AddKeyboardKeyAnnotation()
+	:let l:prepare = "normal! a<kbd></kbd>\<esc>F>"
+	:execute join([l:prepare], "")
+endfunction
+
 nnoremap <leader>h1 :call AddMarkdownHeader(1)<CR>
 nnoremap <leader>h2 :call AddMarkdownHeader(2)<CR>
 nnoremap <leader>h3 :call AddMarkdownHeader(3)<CR>
@@ -24,6 +29,8 @@ nnoremap <leader>yaml :call AddCodeBlock("yaml")<cr>
 nnoremap <leader>js :call AddCodeBlock("js")<cr>
 nnoremap <leader>csharp :call AddCodeBlock("csharp")<cr>
 nnoremap <leader>go :call AddCodeBlock("go")<cr>
+
+nnoremap <leader>kbd :call AddKeyboardKeyAnnotation()<cr>
 
 let g:vim_markdown_conceal_code_blocks = 0
 
