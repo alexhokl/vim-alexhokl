@@ -50,7 +50,9 @@ let g:fzf_colors =
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 command! -bang -nargs=* Rg
-  \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 nnoremap <silent> <C-p> :GFiles -co --exclude-standard<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
 nnoremap <C-f> :Rg<cr>
