@@ -9,6 +9,8 @@ let g:ale_linters = { 'cs': ['OmniSharp'] }
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_list_window_size = 5
+let g:OmniSharp_want_snippet = 1
+let g:OmniSharp_edit_command = 'vsplit'
 
 augroup omnisharp_commands
   autocmd!
@@ -53,9 +55,6 @@ augroup END
 
 " Add syntax highlighting for types and interfaces
 nmap <Leader>th :OmniSharpHighlightTypes<CR>
-
-" Enable snippet completion
-let g:OmniSharp_want_snippet=1
 
 " XML documentation
 nnoremap /// :call AngelDoc#InsertXmlDoc()<CR>
