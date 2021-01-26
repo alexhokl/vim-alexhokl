@@ -11,6 +11,25 @@ let g:ale_set_quickfix = 1
 let g:ale_list_window_size = 5
 let g:OmniSharp_want_snippet = 1
 let g:OmniSharp_edit_command = 'vsplit'
+let g:OmniSharp_highlight_groups = {
+\ 'ExcludedCode': 'NonText',
+\ 'ClassName': 'Typedef',
+\ 'StructName': 'Typedef',
+\ 'DelegateName': 'Structure',
+\ 'EnumName': 'Structure',
+\ 'InterfaceName': 'Structure',
+\ 'ModuleName': 'Structure',
+\ 'NamespaceName': 'Include',
+\ 'RegexComment': 'Comment',
+\ 'RegexCharacterClass': 'Character',
+\ 'RegexAnchor': 'Type',
+\ 'RegexQuantifier': 'Number',
+\ 'RegexGrouping': 'Macro',
+\ 'RegexAlternation': 'Identifier',
+\ 'RegexText': 'String',
+\ 'RegexSelfEscapedCharacter': 'Delimiter',
+\ 'RegexOtherEscape': 'Delimiter'
+\}
 
 augroup omnisharp_commands
   autocmd!
