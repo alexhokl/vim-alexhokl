@@ -12,6 +12,12 @@ let g:ale_list_window_size = 5
 let g:OmniSharp_want_snippet = 1
 let g:OmniSharp_edit_command = 'vsplit'
 let g:OmniSharp_highlight_groups = {
+\ 'LocalName': 'Normal',
+\ 'MethodName': 'Normal',
+\ 'FieldName': 'Normal',
+\ 'ExtensionMethodName': 'Normal',
+\ 'ParameterName': 'Normal',
+\ 'PropertyName': 'Normal',
 \ 'ExcludedCode': 'NonText',
 \ 'ClassName': 'Typedef',
 \ 'StructName': 'Typedef',
